@@ -1,0 +1,65 @@
+
+body {
+    font-family: 'Lato', helvetica, arial, sans-serif;
+	font-size: 13px;
+	color: #222;
+	margin: 30px;
+	width: 100%;
+	line-height: 1.8em;
+    background-color: #FFFFFF;
+}
+.cabecera{
+    border: 0.5mm solid rgb(221, 221, 221); 
+	padding: 2mm; 
+	width: 500px; 
+	text-align: left; 
+	font-size: 90%; 
+	background-color: rgb(238, 238, 238);
+	line-height: 1.3em;
+	border-radius: 20px;
+    margin:5px;
+}
+.titulo{
+	font-size: 1em;
+	font-style: italic;
+	padding-top: 10px;
+	letter-spacing:.0.1em;
+	vertical-align: text-top;
+	letter-spacing:0.2em;
+}
+.apartado{
+	border: 0.5mm solid rgb(221, 221, 221); 
+	padding: 2mm; 
+	width: 15em; 
+	text-align: center; 
+	font-size: 120%; 
+	background-color: rgb(238, 238, 238);
+	line-height: 1.3em;
+	border-radius: 20px; 
+	float: left;
+    margin:5px;
+}
+
+.limpiarfloat{
+    clear:both;
+}
+
+h2 {
+	font-size: 1.7em;
+    font-weight:bold;
+	margin-top: 20px;
+	text-transform: uppercase;
+	letter-spacing:.1em;
+	padding-top: 5px;
+}
+.boton{
+        font-size:10px;
+        font-family:Verdana,Helvetica;
+        font-weight:bold;
+        color:grey;
+        background: rgb(221, 221, 221);
+        border:0px;
+        height:19px;
+        line-height: 1.3em;
+        border-radius: 20px;
+       }

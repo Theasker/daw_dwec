@@ -1,0 +1,45 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <link rel="stylesheet" type="text/css" media="screen" href="estilo.css" />
+        <title>Tarea Desarrollo Web Entorno Cliente</title> 
+        <script type="text/javascript">
+            var nuevaVentana;
+            
+            function crearNueva(){
+                var estado = document.getElementById("estado"); // encuentra el elemento
+                estado.innerHTML="Abierta la ventana nueva";  // sustituye el elemento estado
+                
+                var opciones="resizable=no,scrollbars=0,status=0,locat ion=no,toolbar=no,menubar=no,width=800,height=600" ;
+                nuevaVentana = window.open(pagina,"",opciones);
+            }
+            function cerrarNueva(){
+              if (nuevaVentana){
+                nuevaVentana.close(); nuevaVentana = null;
+              }
+            }
+        </script>
+    </head>
+    <body>
+        
+        <div class="cabecera">
+            <h1>Tarea 3 - Desarrollo Web en Entorno Cliente</h1>
+            <h2 class="titulo">Mauricio Segura Ari&ntilde;o<h2>
+        </div>
+        <div class="cabecera">
+            <center><span id="estado">Estados de ejecuci&oacute;n</span></center>
+        </div>
+        <div class="apartado">
+            <form>
+                <p>
+                Creaci&oacute;n de una nueva ventana.
+                <input type="button" id="crear-ventana" value="Crear Nueva Ventana" onclick="crearNueva()">
+                </p>
+            </form>
+        </div>
+        
+ 
+        <script type="text/javascript">
+            
+        </script>
+    </body>
+</html>

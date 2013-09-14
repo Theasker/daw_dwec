@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+            <link rel="stylesheet" type="text/css" media="screen" href="estilo.css" />
+    </head>
+    <body>
+        <div class="cabecera">
+            <h1>Tarea 2 - Desarrollo Web en Entorno Cliente</h1>
+        	<h2 class="titulo">Mauricio Segura Ari&ntilde;o<h2>
+        </div>
+        <div>
+            <div class="tabla">
+                <script type="text/javascript">
+                    var tabla = 7;
+                    document.write("<h3>Tabla de multiplicar del 7</h3>")
+                    for(var x = 1; x<11;x++){
+                        document.write(tabla," x ",x," = ",(tabla*x),"<br />");
+                    }
+                </script>
+            </div>
+            <div class="tabla">
+                <script type="text/javascript">
+                    document.write("<h3>Tabla de sumar del 8</h3>")
+                    var tabla = 8;
+                    var x = 1;
+                    while(x<11){
+                        document.write(tabla," + ",x," = ",(tabla+x),"<br />");
+                        x++;
+                    }
+                </script>
+            </div>
+            <div class="tabla">
+                <script type="text/javascript">
+                    document.write("<h3>Tabla de dividir del 9</h3>")
+                    var tabla = 9;
+                    var x = 1;
+                    do{
+                        document.write(tabla," / ",x," = ",(tabla/x),"<br />");
+                        x++;
+                    }while(x<11)
+                </script>
+            </div>
+        </div>
+        <div class="limpiarfloat"></div>
+        <div class="cabecera">
+            <center><h2>Operaciones bit a bit<h2></center>
+        </div>
+        <div>
+            <div class="tabla">
+                <script type="text/javascript">
+                    // Para dividir entre 8 hay que desplazar 3 posiciones
+                    document.write("125 / 8 = <b>125 >> 3</b> = ",125>>3);
+                </script>
+            </div>
+            <div class="tabla">
+                <script type="text/javascript">
+                    // Para multiplicar por 4 desplazamos 2 bits a la izquierda
+                    document.write("40 x 4 = <b>40 << 2</b> = ",40<<2);
+                </script>
+            </div>
+            <div class="limpiarfloat"></div>
+            <div class="tabla">
+                <script type="text/javascript">
+                    // Para dividir por 2 desplazamos 1 bit a la derecha
+                    document.write("25 / 2 = <b>25 >> 1</b> = ",25>>1);
+                </script>
+            </div>
+            <div class="tabla">
+                <script type="text/javascript">
+                    // Para multiplicar por 16 desplazamos 4 bits a la izquierda
+                    document.write("10 x 16 = <b>10 << 4</b> = ",10<<4);
+                </script>
+            </div>
+        </div>
+    </body>
+</html>
