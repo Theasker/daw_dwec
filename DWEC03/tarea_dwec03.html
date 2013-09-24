@@ -1,76 +1,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <link rel="stylesheet" type="text/css" media="screen" href="estilo.css" />
-        <title>Tarea Desarrollo Web Entorno Cliente</title> 
-        <script type="text/javascript">
-            var nuevaVentana;
-            
-            function crearNueva(){
-                var estado = document.getElementById("estado"); // encuentra el elemento
-                estado.innerHTML="Abierta la ventana nueva";  // sustituye el elemento estado
-                var opciones="menubar=false, toolbar=false, location=false, directories=false, resizable=false,scrollbars=0,width=800,height=600";
-                nuevaVentana = window.open("http://www.google.es","",opciones);
-                nuevaVentana.setResizeable = false;
-                nuevaVentana.resizable=false;
-                nuevaVentana.document.writeln("<h3>Ejemplo de Ventana Nueva</h3>");
-                nuevaVentana.document.writeln("<b>La url de la nueva ventana es:</b> ",nuevaVentana.document.URL,"<br /");
-                nuevaVentana.document.writeln("<b>El protocolo usado es:</b> ",nuevaVentana.location.protocol,"<br />");
-                nuevaVentana.document.writeln("<b>El navegador usado es:</b> ",nuevaVentana.navigator.appCodeName,"<br />");
-                // Comprobamos La utilización de Java en la nueva ventana
-                nuevaVentana.document.write("<b>Disponibilidad de Java: </b>");
-                if(nuevaVentana.navigator.javaEnabled()){
-                    nuevaVentana.document.write("Java SI disponible en esta ventana<br />");
-                }else{
-                    nuevaVentana.document.write("Java NO disponible en esta ventana<br />");
-                }
-                // Creamos un iframe 
-                var nuevoFrame = document.createElement("iframe");
-                nuevoFrame.id = "googleFrame";
-                nuevoFrame.src = "http://www.google.es";
-                // creamos el elemento
-                // le asignamos un identificador
-                nuevoFrame.id = "nuevoFrame";
-                // le cargamos la página recibida
-                nuevoFrame.src = pagina;
-                // asignamos el ancho del marco
-                nuevoFrame.style.width= '400px';
-                // asignamos el alto del marco
-                nuevoFrame.style.height = '400px';
-                // ponemos el elemento 'miIframe' dentro de la variable 'control'
-                var control = document.getElementById("nuevoFrame")
-                // comprobamos si 'control' no contiene nada para poder añadirlo al documento
-                if (control==null)
-                    document.body.appendChild(nuevoFrame);
-            }
-            }
-            function cerrarNueva(){
-              if (nuevaVentana){
-                nuevaVentana.close(); nuevaVentana = null;
-              }
-            }
-        </script>
-    </head>
-    <body>
+  <head>
+    <link rel="stylesheet" type="text/css" media="screen" href="estilo.css" />
+    <title>Tarea Desarrollo Web Entorno Cliente</title> 
+    <script type="text/javascript" src="tarea_dwec03.js"></script>
+    
+  </head>
+  <body>
+    <div class="cabecera">
+        <center><span id="titulo"></span></center>
+    </div>
+
+    <div class="apartado">
         
-        <div class="cabecera">
-            <h1>Tarea 3 - Desarrollo Web en Entorno Cliente</h1>
-            <h2 class="titulo">Mauricio Segura Ari&ntilde;o<h2>
-        </div>
-        <div class="cabecera">
-            <center><span id="estado">Estados de ejecuci&oacute;n</span></center>
-        </div>
-        <div class="apartado">
-            <form>
-                <p>
-                Creaci&oacute;n de una nueva ventana.
-                <input type="button" id="crear-ventana" value="Crear Nueva Ventana" onclick="crearNueva()">
-                </p>
-            </form>
-        </div>
-        
- 
-        <script type="text/javascript">
-            
-        </script>
-    </body>
+    </div>
+    <script type="text/javascript">
+        crearNueva();
+    </script>
+  </body>
 </html>

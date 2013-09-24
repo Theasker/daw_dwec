@@ -44,7 +44,7 @@ body {
     clear:both;
 }
 
-h2 {
+h1 {
 	font-size: 1.7em;
     font-weight:bold;
 	margin-top: 20px;
@@ -53,13 +53,13 @@ h2 {
 	padding-top: 5px;
 }
 .boton{
-        font-size:10px;
-        font-family:Verdana,Helvetica;
-        font-weight:bold;
-        color:grey;
-        background: rgb(221, 221, 221);
-        border:0px;
-        height:19px;
-        line-height: 1.3em;
-        border-radius: 20px;
-       }
+    font-size:10px;
+    font-family:Verdana,Helvetica;
+    font-weight:bold;
+    color:grey;
+    background: rgb(221, 221, 221);
+    border:0px;
+    height:19px;
+    line-height: 1.3em;
+    border-radius: 20px;
+}
