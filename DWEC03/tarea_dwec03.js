@@ -1,7 +1,9 @@
 var nuevaVentana;
-varios();
+//crearNueva();
+//varios();
+//Creación de nueva ventana
 function crearNueva() {
-  var opciones = "menubar=false, toolbar=false, location=false, directories=false, resizable=false,scrollbars=0,width=800,height=600";
+  var opciones = "menubar=false, toolbar=false, location=false, directories=false, resizable=false,scrollbars=0";
   nuevaVentana = window.open("http://www.google.es", "", opciones);
   nuevaVentana.setResizeable = false;
   nuevaVentana.resizable = false;
@@ -19,26 +21,27 @@ function crearNueva() {
   crearFrame();
 }
 function crearFrame() {
-  nuevaVentana.document.write("Iframe<br />");
-  
-  ifrm = nuevaVentana.document.createElement("IFRAME");
-  nuevaVentana.name('');
-  ifrm.setAttribute("src","http://www.google.com");
-  ifrm.style.display = "block";
-  ifrm.style.width = 800 + "px";
-  ifrm.style.height = 600 + "px";
-  nuevaVentana.document.body.appendChild(ifrm);
+    ifrm = nuevaVentana.document.createElement("iframe");
+    ifrm.setAttribute("id", "idiframe");
+    
+    ifrm.setAttribute("src", "http://stackoverflow.com");
+    ifrm.style.display = "block";
+    ifrm.style.width = 800 + "px";
+    ifrm.style.height = 600 + "px";
+    ifrm.style.color = "red";
+    nuevaVentana.document.body.appendChild(ifrm);
 }
 
 // Continuación del proceso del ejercicio (parte 2)
 function varios(){
-    var titulo = document.getElementById("titulo"); // encuentra el elemento titulo
-    titulo.innerHTML = "<h1>TAREA DWEC03</h1>";  // sustituye el elemento estado
+    document.getElementById('titulo').innerHTML="W3Schools";
+    
     var nomApe = window.prompt("Introduce tu nombre y apellidos");
-    // Se solicita el nombre y apellidos hasta que se introduce algo
     while(!nomApe || nomApe === "" || nomApe === null){
         nomApe=window.prompt("El nombre no puede estar en blanco\nIntroduzca su nombre y apellidos");
     }
+    //console.log("prueba de console.log");
+    alert("final");
 }
 
 
