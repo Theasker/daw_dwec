@@ -1,6 +1,6 @@
 var nuevaVentana;
 //crearNueva();
-//varios();
+varios();
 //Creación de nueva ventana
 function crearNueva() {
   var opciones = "menubar=false, toolbar=false, location=false, directories=false, resizable=false,scrollbars=0";
@@ -34,18 +34,37 @@ function crearFrame() {
 
 // Continuación del proceso del ejercicio (parte 2)
 function varios(){
-    document.getElementById('titulo').innerHTML="W3Schools";
-    
+    // encuentra el elemento titulo
+    document.getElementById('titulo').innerHTML="<center><h1>TAREA DWEC03</h1></center>";
+    /*
     var nomApe = window.prompt("Introduce tu nombre y apellidos");
     while(!nomApe || nomApe === "" || nomApe === null){
         nomApe=window.prompt("El nombre no puede estar en blanco\nIntroduzca su nombre y apellidos");
     }
-    //console.log("prueba de console.log");
-    alert("final");
+    */
+    var fechaNac = window.prompt("Introduce la fecha que naciste (dd/mm/aa)");    
+    while(!(validarFecha(fechaNac)) || isNaN(dia) || isNaN(mes)|| isNaN(anio)){
+        fechaNac = window.prompt("No has introducido una fecha válida.\nIntroduce la fecha que naciste (dd/mm/aa)");
+    }
+
 }
 
-
-
+// validación de la fecha introducida
+function validarFecha(fechaNac){
+    var fecha = fechaNac.split('/');
+    var dia = parseInt(fecha[0]);
+    var mes = parseInt(fecha[1]);
+    var anio = parseInt(fecha[2]);
+    var correcto = false;
+    var ahora = new Date();
+    if(dia<1 || dia>31 || mes<1 || mes>12 || anio<1 || anio>ahora.getFullYear()){
+        correcto = false;
+    }else{
+        correcto = true;
+        bisiesto(dia,mes,anio);
+    }
+    return correcto;
+}
 
 function cerrarNueva() {
   if (nuevaVentana) {
