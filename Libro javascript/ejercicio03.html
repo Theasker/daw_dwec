@@ -7,7 +7,15 @@ Mostrar por pantalla los doce nombres utilizando la función alert().
   <head>
     <title></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <script type="text/javascript" src="ejercicio03.js"></script>
+    <script type="text/javascript">
+        var meses = ["Enero","Febrero","Marzo","Abril","Mayo","Junio",
+        "Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+        var salida = "";
+        for (var x = 0;x < meses.length;x++){
+            salida += meses[x]+"\n";
+        }
+        alert(salida);
+    </script>
   </head>
   <body>
     <div>Crear un array llamado meses y que almacene el nombre de los doce meses del año. 
