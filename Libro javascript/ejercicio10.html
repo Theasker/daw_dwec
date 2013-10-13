@@ -1,0 +1,45 @@
+<!--
+Definir una función que determine si la cadena de texto que se le pasa como parámetro es
+un palíndromo, es decir, si se lee de la misma forma desde la izquierda y desde la derecha.
+Ejemplo de palíndromo complejo: "La ruta nos aporto otro paso natural".
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript">
+      function palindromo(frase) {
+
+        var frase2 = frase.toLowerCase();
+        // eliminamos los espacios
+        frase2 = frase2.replace(/\s/g, '');
+        /*
+         * /\s/g : nos indica lo siguiente
+         // : estamos utilizando una expresión regular entre ambos slash
+         \s : expresión regular definida para el caracter del espacio
+         g : indica que se deben cambiar todas las coincidencias en la cadena.
+         */
+        var delreves = "";
+        var mensaje="<br />";
+        // Invertimos las letras de la frase y lo guardamos en la variable delreves
+        for(var x = (frase2.length - 1) ;x >= 0;x--){
+          mensaje += "posicion " + x + " = " + frase2.substr(x,1) + "<br />";
+          delreves += frase2.substr(x,1);
+        }
+        document.write(mensaje);
+        document.write("<br />resultado: " + frase2 + "\n" + delreves);
+        // comprobamos se las 2 frases son iguales
+        if(frase2 == delreves){
+          document.write("<br />La fase pasada es un palíndromo");
+        }else
+          document.write("<br />La fase pasada NO es un palíndromo");
+      }
+      palindromo("La ruta nos aporto otro paso natural");
+      palindromo("esto lo es?")
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
