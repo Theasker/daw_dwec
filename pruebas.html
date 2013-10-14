@@ -1,12 +1,15 @@
 <html>
-  <head>
-    <script type="text/javascript">
-      var dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
-      for (i in dias) {
-        alert(dias[i]);
-      }
+<head>
+<script type="text/javascript">
+    var parrafos = document.getElementsByTagName("p");
+    for (var i = 0; i < parrafos.length; i++){
+    	document.write(parrafos[i]+"<br />");
+    }
     </script>
-  </head>
-  <body>
-  </body>
+</head>
+<body>
+	<p>primer párrafo</p>
+	<p>segundo párrafo</p>
+	<p>tercer párrafo</p>
+</body>
 </html>
