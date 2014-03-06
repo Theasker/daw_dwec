@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>ejercicio 4 - jQuery</title>
+    <style>
+      button {
+        padding: 12px;
+      }
+    </style>
+    <script src="jquery-1.10.2.js"></script>
+    <script>
+      $(document).ready(function() {
+        $("button").click(function() {
+          var parrafos = $("p").length;
+          alert("Los párrafos casi van a desaparecer");
+          /*Si hacemos un fadeOut luego el fadeTo no funciona, 
+           * por eso hacemos un fadeTo a opacidad 0*/
+          /*los dos efectos pueden ir juntos sin callback, 
+           * pero el alert no, porque se ejecutaría antes 
+           finalizar los 3s */
+          $("p").fadeTo(1500, 0);
+          $("p").fadeTo(3000, 1, function() {
+            if (--parrafos > 0)
+              return;
+            alert("Los párrafos han aparecido AHORA");
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+      in turpis sem, eu suscipit urna. Vestibulum odio purus, semper vitae
+      torquent per conubia nostra, per inceptos himenaeos.</p>
+    <p>Duis id justo quis tortor posuere auctor sit amet id felis.
+      Proin mattis vulputate faucibus. Maecenas eget gravida leo. Curabitur
+      amet dui viverra eros vulputate congue eget nec leo.</p>
+    <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+      posuere cubilia Curae; Nullam vulputate tincidunt ipsum, vitae
+      nec at ipsum. Aenean a ante nec neque lacinia venenatis.</p>
+    <p>Sed convallis erat ultricies magna vehicula eget dictum lorem
+      pharetra. Sed vulputate lorem et erat convallis commodo. Proin
+      pulvinar, placerat id nisl. Praesent nec magna odio, vel faucibus mi.
+    </p>
+    <p>Donec aliquet lorem magna, et congue est. Cras ornare dui eget
+      risus molestie quis cursus lorem cursus. Proin sit amet interdum nibh.
+      purus. Donec iaculis neque id purus posuere pharetra.</p>
+    <button>Pulsa aquí</button>
+  </body>
+</html>

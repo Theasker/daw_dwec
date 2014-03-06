@@ -1,0 +1,30 @@
+<html>
+	<head>
+	<title>DWEC - Práctica de validación con validate</title>
+		<meta charset="UTF-8">
+		<script src="validate/lib/jquery.js" type="text/javascript"></script>
+		<script src="validate/dist/jquery.validate.js" type="text/javascript"></script>
+		<script src="validate/localization/messages.es.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<form method="post" id="formulario">
+			<input name="texto1"/>
+			<input name="texto2"/>
+			<input name="texto3"/>
+	 <input type="submit" value="Enviar" />
+	</form>
+	<script>
+		$("#formulario").validate({
+			debug: true;
+			rules: {
+				texto1: {
+					required: true,
+					minlength: 2
+				}
+			}
+		}
+		);
+	</script>
+	</body>
+</html>
+

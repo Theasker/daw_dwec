@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8" />
+<title>Ejercicio 4</title>
+<script type="text/javascript">
+for(var x = 1;x <= 100;x++){
+    // convertimos el número a string para poder extraer el último dígito de cualquier número
+    var nstr = x.toString();
+    // guarda el último caracter de la cadena
+    var final = nstr.substring(nstr.length - 1);
+    if (( (x % 7) == 0) || (parseInt(final) == 7)){
+        document.write("PUM <br />");
+    }else{
+        document.write(x + ", ");
+    }
+}
+</script>
+</head>
+<body>
+</body>

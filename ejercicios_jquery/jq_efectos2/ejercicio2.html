@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>ejercicio 2 - jQuery</title>
+    <style>
+      button {
+        padding: 12px;
+      }
+    </style>
+    <script src="jquery-1.10.2.js"></script>
+    <script>
+      $(document).ready(function() {
+        $("button").click(function() {
+          var parrafos = $("p").length;
+          $("p").fadeOut(3000, function() {
+            if (--parrafos > 0)
+              return;
+            alert("El párrafo se ha escondido AHORA");
+            //$("p").stop();
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+      in turpis sem, eu suscipit urna. Vestibulum odio purus, semper vitae
+      posuere consequat eros. Class aptent taciti sociosqu ad litora
+      torquent per conubia nostra, per inceptos himenaeos.</p>
+    <p>Duis id justo quis tortor posuere auctor sit amet id felis.
+      vehicula et tortor. Quisque vestibulum porttitor hendrerit. Morbi
+      mollis massa non felis hendrerit a ornare enim posuere. Praesent sit
+      amet dui viverra eros vulputate congue eget nec leo.</p>
+    <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+      posuere cubilia Curae; Nullam vulputate tincidunt ipsum, vitae
+      nec at ipsum. Aenean a ante nec neque lacinia venenatis.</p>
+    <p>Sed convallis erat ultricies magna vehicula eget dictum lorem
+      pharetra. Sed vulputate lorem et erat convallis commodo. Proin
+      justo vitae ligula. Vestibulum tincidunt augue et nibh viverra et
+      tincidunt sapien dapibus. Nulla tortor nunc, molestie vel rutrum
+      pulvinar, placerat id nisl. Praesent nec magna odio, vel faucibus mi.
+    </p>
+    <p>Donec aliquet lorem magna, et congue est. Cras ornare dui eget
+      risus molestie quis cursus lorem cursus. Proin sit amet interdum nibh.
+      tincidunt quam, et condimentum nibh enim ac nisi. Proin sit amet purus
+      purus. Donec iaculis neque id purus posuere pharetra.</p>
+    <button>Pulsa aquí</button>
+  </body>
+</html>
