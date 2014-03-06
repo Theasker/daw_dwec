@@ -7,7 +7,7 @@ Tarea 2 de validación de formularios con JQuery Validate
     <title>Tarea 2 de validación de formularios con JQuery Validate</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    
+
     <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
     <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
     <script type="text/javascript" src="js/jquery.validate.js"></script>
@@ -17,10 +17,165 @@ Tarea 2 de validación de formularios con JQuery Validate
   <body>
     <div id="contenedor">
       <h1>Tarea 2 - Validación de formularios</h1>
-      <fieldset>
-        <legend>
-      </fieldset>
-      
+      <form name="registro" method="post" action="">
+        <fieldset id="contacto">
+          <legend>Información de Contacto</legend>
+          <div id="salto">
+            <label for="nombre">Nombre: <span class="required">*</span>
+              <input type="text" id="nombre" name="nombre">
+            </label>
+            <label for="apellidos">Apellidos: <span class="required">*</span>
+              <input type="text" id="apellidos" name="apellidos">
+            </label>
+            <label for="telefono">Teléfono: <span class="required">*</span>
+              <input type="text" id="telefono" name="telefono">
+            </label>
+          </div>
+          <div id="salto">
+            <label for="email">Email: <span class="required">*</span>
+              <input type="email" id="email" name="email">
+            </label>
+            <label for="email2">Repetir email: <span class="required">*</span>
+              <input type="email" id="email2" name="email2">
+            </label>          
+            <label for="conocido" class="">¿Cómo nos has conocido?
+              <select name="conocido" style="width: 19em;">
+                <option value="" selected="selected">----</option>
+                <option value="1">Prefiero no contestar</option>
+                <option value="2">Publicidad</option>
+                <option value="3">Profesionales del sector</option>
+                <option value="4">Internet</option>
+                <option value="5">A través de un amigo o conocido</option>
+              </select>
+            </label>
+          </div>
+        </fieldset>
+        <fieldset id="facturacion">
+          <legend>Datos de facturación</legend>
+          <div id="salto">
+            <label for="demandante">Demandante: <span class="required">*</span>
+              <label for="demandante"><input name="demandante" value="1" type="radio" checked="checked">Particular</label>
+              <label for="demandante"><input name="demandante" value="2" type="radio">Empresa</label>
+            </label>
+          </div>
+          <div id="salto">
+            <label for="nif">
+              <span class="nif">NIF</span>
+              <span class="cif">CIF</span>
+              <span class="required">*</span>
+              <input type="text" name="nif" id="nif">
+            </label>
+            <label for="razonsocial">
+              <span class="nif">Nombre</span>
+              <span class="cif">Empresa</span>
+              <span class="required">*</span>
+              <input type="text" name="razonsocial" id="razonsocial">
+            </label>
+          </div>
+          <div id="salto">
+            <label for="direccion">Dirección: <span class="required">*</span>
+              <input type="text" id="direccion" name="direccion">
+            </label>
+            <label for="localidad">Localidad: <span class="required">*</span>
+              <input type="text" id="required" name="localidad">
+            </label>
+          </div>
+          <div id="salto">
+            <label for="cp">CP: <span class="required">*</span>
+              <input type="text" id="required" name="cp">
+            </label>
+            <label for="provincia">Provincia: <span class="required">*</span>
+              <select name="provincia" id="provincia" style="width: 19em;">
+                <option value="">----</option>
+                <option value="1">Alava</option>
+                <option value="2">Albacete</option>
+                <option value="3">Alicante</option>
+                <option value="4">Almería</option>
+                <option value="33">Asturias</option>
+                <option value="5">Ávila</option>
+                <option value="6">Badajoz</option>
+                <option value="7">Baleares</option>
+                <option value="8">Barcelona</option>
+                <option value="9">Burgos</option>
+                <option value="10">Caceres</option>
+                <option value="11">Cádiz</option>
+                <option value="39">Cantabria</option>
+                <option value="12">Castellón</option>
+                <option value="51">Ceuta</option>
+                <option value="13">Ciudad Real</option>
+                <option value="14">Cordoba</option>
+                <option value="16">Cuenca</option>
+                <option value="17">Gerona</option>
+                <option value="18">Granada</option>
+                <option value="19">Guadalajara</option>
+                <option value="20">Guipuzcoa</option>
+                <option value="21">Huelva</option>
+                <option value="22">Huesca</option>
+                <option value="23">Jaén</option>
+                <option value="15">La Coruña</option>
+                <option value="26">La Rioja</option>
+                <option value="35">Las Palmas</option>
+                <option value="24">León</option>
+                <option value="25">Lérida</option>
+                <option value="27">Lugo</option>
+                <option value="28">Madrid</option>
+                <option value="29">Málaga</option>
+                <option value="52">Melilla</option>
+                <option value="30">Murcia</option>
+                <option value="31">Navarra</option>
+                <option value="32">Orense</option>
+                <option value="34">Palencia</option>
+                <option value="36">Pontevedra</option>
+                <option value="37">Salamanca</option>
+                <option value="38">Santa Cruz de Tenerife</option>
+                <option value="40">Segovia</option>
+                <option value="41">Sevilla</option>
+                <option value="42">Soria</option>
+                <option value="43">Tarragona</option>
+                <option value="44">Teruel</option>
+                <option value="45">Toledo</option>
+                <option value="46">Valencia</option>
+                <option value="47">Valladolid</option>
+                <option value="48">Vizcaya</option>
+                <option value="49">Zamora</option>
+                <option value="50">Zaragoza</option>
+              </select>
+            </label>
+            <label for="pais">Localidad: <span class="required">*</span>
+              <input type="text" id="required" name="pais">
+            </label>
+          </div>
+          <div id="salto">
+            <label for="ctacte">Código IBAN: <span class="required">*</span>
+              <input type="text" id="ctacte" name="ctacte">
+            </label>
+            <label for="pago">Forma de pago: <span class="required">*</span>
+              <select name="pago" id="pago" style="width: 19em;">
+                <option value="mensual">Mensual</option>
+                <option value="trimestral">Trimestral</option>
+                <option value="anual">Anual</option>
+              </select>
+            </label>
+          </div>
+        </fieldset>
+        <fieldset id="acceso">
+          <legend>Datos de acceso </legend>
+          <div id="salto">
+            <label for="usuario">Usuario: <span class="required">*</span>
+              <input type="text" id="usuario" name="usuario" readonly>
+            </label>
+            <label for="pass">Clave: <span class="required">*</span>
+              <input type="password" id="pass" name="pass">
+            </label>
+            <label for="pass2">Repite clave: <span class="required">*</span>
+              <input type="password" id="pass2" name="pass2">
+            </label>
+          </div>
+        </fieldset>
+        <div id="enviar">
+            <input type="submit" value="Guardar">
+        </div>
+      </form>           
     </div>
   </body>
 </html>
