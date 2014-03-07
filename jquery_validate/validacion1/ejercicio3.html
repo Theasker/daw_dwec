@@ -15,7 +15,6 @@
     <script type="text/javascript" src="jquery.validate.js"></script>
   </head>
   <body>
-    <div class="prueba"><p>hola</p></div>
     <form id="formulario" novalidate  action="accion.php" method="post">
       <div>
         <label for="nombre">Nombre:
@@ -42,18 +41,16 @@
       </div>
     </form>
     <script>
-      $("#prueba").html("funciona");
       $("#formulario").validate({onkeyup: false, onfocusout: false, onclick: false});
     </script>
   </body>
 
 </html>
-
-
 <!-- Observaciones: 
      La validación se puede hacer en los siguientes instantes:
      onsubmit, onfocusout, onkeyup, onclick
-     En principio validate la hace de todos los campos en el submit y luego la hace por cada "variación" que detecta en el formulario, de modo que sea poco intrusivo.
+     En principio validate la hace de todos los campos en el submit 
+     y luego la hace por cada "variación" que detecta en el formulario, de modo que sea poco intrusivo.
      Sin embargo para los campos de type="email" y type="url" lo hace de forma instantánea.
      
      No son necesarias las class=url o email. Al ser el elemento del tipo url o email hace la validación sin necesidad del metadato.

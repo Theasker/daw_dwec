@@ -8,7 +8,7 @@ Tarea 2 de validación de formularios con JQuery Validate
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/practicaValidacion.css">
     <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
     <script type="text/javascript" src="js/jquery.validate.js"></script>
     <script type="text/javascript" src="js/additional-methods.js"></script>
@@ -19,12 +19,12 @@ Tarea 2 de validación de formularios con JQuery Validate
     <div id="contenedor">
       <span id="prueba"></span>
       <h1>Tarea 2 - Validación de formularios</h1>
-      <form name="formulario" method="post" action="">
+      <form novalidate="novalidate" id="formulario" method="post" action="index.html">
         <fieldset id="contacto">
           <legend>Información de Contacto</legend>
           <div id="salto">
-            <label for="nombre">Nombre: <span class="required">*</span>
-              <input type="text" id="nombre" name="nombre">
+            <label class="etiqueta" for="nombre">Nombre: <span class="required">*</span>
+              <input type="text" id="nombre" name="nombre" class="required">
             </label>
             <label for="apellidos">Apellidos: <span class="required">*</span>
               <input type="text" id="apellidos" name="apellidos">
@@ -55,10 +55,9 @@ Tarea 2 de validación de formularios con JQuery Validate
         <fieldset id="facturacion">
           <legend>Datos de facturación</legend>
           <div id="salto">
-            <label for="demandante">Demandante: <span class="required">*</span>
-              <label for="demandante"><input name="demandante" value="1" type="radio" checked="checked">Particular</label>
-              <label for="demandante"><input name="demandante" value="2" type="radio">Empresa</label>
-            </label>
+            <label for="demandante">Demandante: <span class="required">*</span></label>
+              <label for="demandante"><input id="demandante" name="demandante" value="particular" type="radio" checked="checked">Particular</label>
+              <label for="demandante"><input id="demandante" name="demandante" value="empresa" type="radio">Empresa</label>
           </div>
           <div id="salto">
             <label for="nif">
@@ -79,12 +78,12 @@ Tarea 2 de validación de formularios con JQuery Validate
               <input type="text" id="direccion" name="direccion">
             </label>
             <label for="localidad">Localidad: <span class="required">*</span>
-              <input type="text" id="required" name="localidad">
+              <input type="text" id="localidad" name="localidad">
             </label>
           </div>
           <div id="salto">
             <label for="cp">CP: <span class="required">*</span>
-              <input type="text" id="required" name="cp">
+              <input type="text" id="cp" name="cp">
             </label>
             <label for="provincia">Provincia: <span class="required">*</span>
               <select name="provincia" id="provincia" style="width: 19em;">
@@ -143,8 +142,8 @@ Tarea 2 de validación de formularios con JQuery Validate
                 <option value="50">Zaragoza</option>
               </select>
             </label>
-            <label for="pais">Localidad: <span class="required">*</span>
-              <input type="text" id="required" name="pais">
+            <label for="pais">Pais: <span class="required">*</span>
+              <input type="text" id="pais" name="pais">
             </label>
           </div>
           <div id="salto">
