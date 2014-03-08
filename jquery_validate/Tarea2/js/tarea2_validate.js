@@ -46,6 +46,8 @@ $(document).ready(function() {
       cp: {
         required: true,
         digits: true,
+        minlength: 5,
+        maxlength: 5
       },
       provincia: {
         required: true
@@ -107,6 +109,16 @@ $(document).ready(function() {
       res += cp;
       $("#cp").val(res);
     }
+    if ((cp != "")&&(cp.length == 5)){ // si se ha introducido algo en código postal
+      var codprov = $("#cp").val();
+      codprov = codprov.substr(0,2);
+      
+      
+      $("#provincia").val(codprov);
+      var loclidad = $("#provincia").val();
+//      var loclidad = $("#provincia option[value='" + codprov + "']").text();
+      $("#prueba").html(localidad);
+    }
   });
   
   // El campo razonsocial es la suma de los campos nombre + apellidos
@@ -121,8 +133,16 @@ $(document).ready(function() {
   $("#apellidos").focusout(function(){nomape()});
   
   // Comprobación del cambio de demandante (Particular/Empresa)
-//  $("#demandante").change(function(){
-//    $("#prueba").html("funciona");
-//  })
+  $(".demandante").change(function(){
+    if($("#particular").attr("checked")){
+      $(".cif").hide();
+      $(".nif").show();
+      nomape();
+    }else if($("#empresa").attr("checked")){
+      $(".cif").show();
+      $(".nif").hide();
+      $("#razonsocial").val("");
+    }
+  });
 });
 

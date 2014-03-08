@@ -37,12 +37,8 @@ if (isset($_POST['zip'])) {
         $valid= 'false';
     } else {
        $valid='true';
-    }
-    
-    
-	$okey = $sql->fetch();    
-    
-    
+    }    
+	$okey = $sql->fetch();
 }
 $sql=null;
 $db = null;

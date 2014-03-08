@@ -9,6 +9,8 @@ Tarea 2 de validación de formularios con JQuery Validate
     <meta name="viewport" content="width=device-width">
 
     <link rel="stylesheet" href="./css/practicaValidacion.css">
+
+
     <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
     <script type="text/javascript" src="js/jquery.validate.js"></script>
     <script type="text/javascript" src="js/additional-methods.js"></script>
@@ -23,25 +25,25 @@ Tarea 2 de validación de formularios con JQuery Validate
         <fieldset id="contacto">
           <legend>Información de Contacto</legend>
           <div id="salto">
-            <label class="etiqueta" for="nombre">Nombre: <span class="required">*</span>
+            <label class="campo" for="nombre">Nombre: <span class="required">*</span>
               <input type="text" id="nombre" name="nombre" class="required">
             </label>
-            <label for="apellidos">Apellidos: <span class="required">*</span>
+            <label class="campo" for="apellidos">Apellidos: <span class="required">*</span>
               <input type="text" id="apellidos" name="apellidos">
             </label>
-            <label for="telefono">Teléfono: <span class="required">*</span>
+            <label class="campo" for="telefono">Teléfono: <span class="required">*</span>
               <input type="text" id="telefono" name="telefono">
             </label>
           </div>
           <div id="salto">
-            <label for="email">Email: <span class="required">*</span>
+            <label class="campo" for="email">Email: <span class="required">*</span>
               <input type="email" id="email" name="email">
             </label>
-            <label for="email2">Repetir email: <span class="required">*</span>
+            <label class="campo" for="email2">Repetir email: <span class="required">*</span>
               <input type="email" id="email2" name="email2">
             </label>          
-            <label for="conocido" class="">¿Cómo nos has conocido?
-              <select name="conocido" style="width: 19em;">
+            <label class="campo" for="conocido" class="">¿Cómo nos has conocido?
+              <select name="conocido" style="width: 12em;">
                 <option value="" selected="selected">----</option>
                 <option value="1">Prefiero no contestar</option>
                 <option value="2">Publicidad</option>
@@ -55,38 +57,40 @@ Tarea 2 de validación de formularios con JQuery Validate
         <fieldset id="facturacion">
           <legend>Datos de facturación</legend>
           <div id="salto">
-            <label for="demandante">Demandante: <span class="required">*</span></label>
-              <label for="demandante"><input id="demandante" name="demandante" value="particular" type="radio" checked="checked">Particular</label>
-              <label for="demandante"><input id="demandante" name="demandante" value="empresa" type="radio">Empresa</label>
+            <div id="demandante">
+              <label class="campo" for="demandante">Demandante: <span class="required">*</span></label>
+              <input id="particular" class="demandante" name="demandante" value="particular" type="radio" checked="checked">Particular
+              <input id="empresa" class="demandante" name="demandante" value="empresa" type="radio">Empresa
+            </div>
           </div>
           <div id="salto">
-            <label for="nif">
+            <label class="campo" for="nif">
               <span class="nif">NIF</span>
               <span class="cif">CIF</span>
               <span class="required">*</span>
               <input type="text" name="nif" id="nif">
             </label>
-            <label for="razonsocial">
+            <label class="campo" for="razonsocial">
               <span class="nif">Nombre</span>
-              <span class="cif">Empresa</span>
+              <span class="cif">Razón Social</span>
               <span class="required">*</span>
               <input type="text" name="razonsocial" id="razonsocial">
             </label>
           </div>
           <div id="salto">
-            <label for="direccion">Dirección: <span class="required">*</span>
+            <label class="campo" for="direccion">Dirección: <span class="required">*</span>
               <input type="text" id="direccion" name="direccion">
             </label>
-            <label for="localidad">Localidad: <span class="required">*</span>
+            <label class="campo" for="localidad">Localidad: <span class="required">*</span>
               <input type="text" id="localidad" name="localidad">
             </label>
           </div>
           <div id="salto">
-            <label for="cp">CP: <span class="required">*</span>
+            <label class="campo" for="cp">CP: <span class="required">*</span>
               <input type="text" id="cp" name="cp">
             </label>
-            <label for="provincia">Provincia: <span class="required">*</span>
-              <select name="provincia" id="provincia" style="width: 19em;">
+            <label class="campo" for="provincia">Provincia: <span class="required">*</span>
+              <select name="provincia" id="provincia" style="width: 14em;">
                 <option value="">----</option>
                 <option value="1">Alava</option>
                 <option value="2">Albacete</option>
@@ -142,16 +146,16 @@ Tarea 2 de validación de formularios con JQuery Validate
                 <option value="50">Zaragoza</option>
               </select>
             </label>
-            <label for="pais">Pais: <span class="required">*</span>
+            <label class="campo" for="pais">Pais: <span class="required">*</span>
               <input type="text" id="pais" name="pais">
             </label>
           </div>
           <div id="salto">
-            <label for="ctacte">Código IBAN: <span class="required">*</span>
+            <label class="campo" for="ctacte">Código IBAN: <span class="required">*</span>
               <input type="text" id="ctacte" name="ctacte">
             </label>
-            <label for="pago">Forma de pago: <span class="required">*</span>
-              <select name="pago" id="pago" style="width: 19em;">
+            <label class="campo" for="pago">Forma de pago: <span class="required">*</span>
+              <select name="pago" id="pago" style="width: 8em;">
                 <option value="mensual">Mensual</option>
                 <option value="trimestral">Trimestral</option>
                 <option value="anual">Anual</option>
@@ -162,19 +166,19 @@ Tarea 2 de validación de formularios con JQuery Validate
         <fieldset id="acceso">
           <legend>Datos de acceso </legend>
           <div id="salto">
-            <label for="usuario">Usuario: <span class="required">*</span>
+            <label class="campo" for="usuario">Usuario: <span class="required">*</span>
               <input type="text" id="usuario" name="usuario" readonly>
             </label>
-            <label for="pass">Clave: <span class="required">*</span>
+            <label class="campo" for="pass">Clave: <span class="required">*</span>
               <input type="password" id="pass" name="pass">
             </label>
-            <label for="pass2">Repite clave: <span class="required">*</span>
+            <label class="campo" for="pass2">Repite clave: <span class="required">*</span>
               <input type="password" id="pass2" name="pass2">
             </label>
           </div>
         </fieldset>
         <div id="enviar">
-            <input type="submit" value="Guardar">
+          <input type="submit" value="Guardar">
         </div>
       </form>           
     </div>
