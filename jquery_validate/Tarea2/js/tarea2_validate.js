@@ -62,10 +62,12 @@ $(document).ready(function() {
         required: true
       },
       usuario: {
-        required: true
+        required: true,
+        minlength: 4
       },
       pass: {
-        required: true
+        required: true,
+        passCompleja: true
       },
       pass2: {
         equalTo: pass
@@ -87,7 +89,7 @@ $(document).ready(function() {
         email: "el email no es correcto",
         remote: "email ya resgistrado"
       },
-      nif:{
+      nif: {
         remote: "nif/dni ya registrado"
       },
       cp: {
@@ -100,49 +102,83 @@ $(document).ready(function() {
   // Rellenamos 0 el cp hasta completar 5 dígitos
   $("#cp").focusout(function() {
     var cp = $("#cp").val();
-    if (cp.length < 5){
+    if (cp.length < 5) {
       var num = 5 - cp.length;
       var res = "";
-      for (var cont = 1; cont <= num; cont++){
+      for (var cont = 1; cont <= num; cont++) {
         res += 0;
       }
       res += cp;
       $("#cp").val(res);
     }
-    if ((cp != "")&&(cp.length == 5)){ // si se ha introducido algo en código postal
+    if ((cp != "") && (cp.length == 5)) { // si se ha introducido algo en código postal
       var codprov = $("#cp").val();
-      codprov = codprov.substr(0,2);
-      
-      
+      codprov = codprov.substr(0, 2);
       $("#provincia").val(codprov);
-      var loclidad = $("#provincia").val();
-//      var loclidad = $("#provincia option[value='" + codprov + "']").text();
-      $("#prueba").html(localidad);
+      var localidad = $("#provincia option[value='" + codprov + "']").text();
+      $("#localidad").val(localidad);
     }
   });
-  
+
   // El campo razonsocial es la suma de los campos nombre + apellidos
-  function nomape(){
+  function nomape() {
     var nom = $("#nombre").val();
     var ape = $("#apellidos").val();
     nom = nom + " " + ape;
     $("#prueba").html(nom);
     $("#razonsocial").val(nom);
   }
-  $("#nombre").focusout(function(){nomape()});
-  $("#apellidos").focusout(function(){nomape()});
-  
+  $("#nombre").focusout(function() {
+    nomape()
+  });
+  $("#apellidos").focusout(function() {
+    nomape()
+  });
+
   // Comprobación del cambio de demandante (Particular/Empresa)
-  $(".demandante").change(function(){
-    if($("#particular").attr("checked")){
+  $(".demandante").change(function() {
+    if ($("#particular").attr("checked")) {
       $(".cif").hide();
       $(".nif").show();
       nomape();
-    }else if($("#empresa").attr("checked")){
+    } else if ($("#empresa").attr("checked")) {
       $(".cif").show();
       $(".nif").hide();
       $("#razonsocial").val("");
     }
   });
+  
+  // Se rellena automáticamente el usuario con el email. 
+  // La comprobación del mínimo de 4 caráctres 
+  $("#email").change(function(){
+    $("#usuario").val($("#email").val());
+  });
+  
+  //Contraseña compleja
+  function passCompleja(value, element, param) {
+//    if (value.length < 8){
+//      return false;
+//    }
+    var medida = 0;
+    $("#pass").complexify({}, function(valid, complexity) {
+      medida = complexity;
+    });
+    if (medida < 30) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+  ;
+
+  $("#pass").change(function() {
+    $("#pass").complexify({}, function(valid, complexity) {
+      $("#valorpass").val(complexity);
+      $("#porcentaje").html(parseFloat(complexity).toFixed(2) + "%");
+    });
+  });
+  
+    
+  $.validator.addMethod("passCompleja", passCompleja, "Contraseña débil (+30%)");
 });
 

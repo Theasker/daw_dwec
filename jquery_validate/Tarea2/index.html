@@ -16,6 +16,7 @@ Tarea 2 de validación de formularios con JQuery Validate
     <script type="text/javascript" src="js/additional-methods.js"></script>
     <script type="text/javascript" src="js/messages_es.js"></script>
     <script type="text/javascript" src="js/tarea2_validate.js"></script>
+    <script type="text/javascript" src="js/jquery.complexify.js"></script>
   </head>
   <body>
     <div id="contenedor">
@@ -171,6 +172,8 @@ Tarea 2 de validación de formularios con JQuery Validate
             </label>
             <label class="campo" for="pass">Clave: <span class="required">*</span>
               <input type="password" id="pass" name="pass">
+              <meter value="0" id="valorpass" max="100"></meter>
+              <span id="porcentaje"></span>
             </label>
             <label class="campo" for="pass2">Repite clave: <span class="required">*</span>
               <input type="password" id="pass2" name="pass2">
