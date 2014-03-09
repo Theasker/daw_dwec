@@ -4,12 +4,11 @@ Tarea 2 de validación de formularios con JQuery Validate
 -->
 <html>
   <head>
-    <title>Tarea 2 de validación de formularios con JQuery Validate</title>
+    <title>Validación de formularios con JQuery Validate</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
 
-    <link rel="stylesheet" href="./css/practicaValidacion.css">
-
+    <link rel="stylesheet" href="./css/estilo.css">
 
     <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
     <script type="text/javascript" src="js/jquery.validate.js"></script>
@@ -21,13 +20,13 @@ Tarea 2 de validación de formularios con JQuery Validate
   <body>
     <div id="contenedor">
       <span id="prueba"></span>
-      <h1>Tarea 2 - Validación de formularios</h1>
+      <h1>Validación de formularios</h1>
       <form novalidate="novalidate" id="formulario" method="post" action="index.html">
         <fieldset id="contacto">
           <legend>Información de Contacto</legend>
           <div id="salto">
             <label class="campo" for="nombre">Nombre: <span class="required">*</span>
-              <input type="text" id="nombre" name="nombre" class="required">
+              <input type="text" id="nombre" name="nombre">
             </label>
             <label class="campo" for="apellidos">Apellidos: <span class="required">*</span>
               <input type="text" id="apellidos" name="apellidos">
@@ -44,7 +43,7 @@ Tarea 2 de validación de formularios con JQuery Validate
               <input type="email" id="email2" name="email2">
             </label>          
             <label class="campo" for="conocido" class="">¿Cómo nos has conocido?
-              <select name="conocido" style="width: 12em;">
+              <select name="conocido">
                 <option value="" selected="selected">----</option>
                 <option value="1">Prefiero no contestar</option>
                 <option value="2">Publicidad</option>
@@ -60,8 +59,10 @@ Tarea 2 de validación de formularios con JQuery Validate
           <div id="salto">
             <div id="demandante">
               <label class="campo" for="demandante">Demandante: <span class="required">*</span></label>
-              <input id="particular" class="demandante" name="demandante" value="particular" type="radio" checked="checked">Particular
-              <input id="empresa" class="demandante" name="demandante" value="empresa" type="radio">Empresa
+              <input id="particular" class="demandante" name="demandante" value="particular" type="radio" checked="checked">
+              Particular
+              <input id="empresa" class="demandante" name="demandante" value="empresa" type="radio">
+              Empresa
             </div>
           </div>
           <div id="salto">
@@ -91,18 +92,18 @@ Tarea 2 de validación de formularios con JQuery Validate
               <input type="text" id="cp" name="cp">
             </label>
             <label class="campo" for="provincia">Provincia: <span class="required">*</span>
-              <select name="provincia" id="provincia" style="width: 14em;">
+              <select name="provincia" id="provincia">
                 <option value="">----</option>
-                <option value="1">Alava</option>
-                <option value="2">Albacete</option>
-                <option value="3">Alicante</option>
-                <option value="4">Almería</option>
+                <option value="01">Alava</option>
+                <option value="02">Albacete</option>
+                <option value="03">Alicante</option>
+                <option value="04">Almería</option>
                 <option value="33">Asturias</option>
-                <option value="5">Ávila</option>
-                <option value="6">Badajoz</option>
-                <option value="7">Baleares</option>
-                <option value="8">Barcelona</option>
-                <option value="9">Burgos</option>
+                <option value="05">Ávila</option>
+                <option value="06">Badajoz</option>
+                <option value="07">Baleares</option>
+                <option value="08">Barcelona</option>
+                <option value="09">Burgos</option>
                 <option value="10">Caceres</option>
                 <option value="11">Cádiz</option>
                 <option value="39">Cantabria</option>
@@ -156,7 +157,7 @@ Tarea 2 de validación de formularios con JQuery Validate
               <input type="text" id="ctacte" name="ctacte">
             </label>
             <label class="campo" for="pago">Forma de pago: <span class="required">*</span>
-              <select name="pago" id="pago" style="width: 8em;">
+              <select name="pago" id="pago">
                 <option value="mensual">Mensual</option>
                 <option value="trimestral">Trimestral</option>
                 <option value="anual">Anual</option>

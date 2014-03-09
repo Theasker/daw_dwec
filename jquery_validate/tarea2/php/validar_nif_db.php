@@ -14,7 +14,7 @@ try {
     echo "La conexi&oacute;n ha fallado: " . $e->getMessage();
 }
 /* Para hacer debug cargaríamos a mano el parámetro, descomentaríamos la siguiente línea: */
-$_REQUEST['nif'] = "17740226G";
+//$_REQUEST['nif'] = "17740226G";
 //echo $_REQUEST['nif'];
 $valid = "";
 if (isset($_REQUEST['nif'])) {

@@ -1,0 +1,112 @@
+
+
+#contenedor{
+  margin: 30px auto;
+  border: 1px solid #ddd;
+  text-align: left;
+  width: 800px !important;
+  /* width :450px;*/
+
+  background-color: rgb(238, 238, 238);
+  border: 0.5mm solid rgb(221, 221, 221);
+  box-shadow: 2px 2px 5px #999;
+  border-radius: 20px;
+}
+
+h1{
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-weight: 900;
+  font-size: 2.3em;
+  letter-spacing: 1px;
+  line-height: 1em;
+}
+
+fieldset{
+  border-radius:10px;
+  border: 0.5mm solid rgb(221, 221, 221);
+  background-color: rgb(238, 238, 238);
+  margin:15px;
+  padding: 10px;
+  border-radius:10px;
+  border: 0.5mm solid rgb(221, 221, 221);
+  background-color: whitesmoke;
+  box-shadow: 2px 2px 5px #999;
+}
+fieldset:hover {
+  background-color: #ddd;
+  display:table;
+}
+
+label input, label select{
+  /*	width:100%;*/  
+}
+
+.required{
+  color:red;
+  font-size:0.8;
+}
+
+input,select{
+  width: 200px;
+}
+
+meter{
+  width: 150px;
+}
+
+legend{
+  font: 10px/10px sans-serif; /* stop IE from revealing unnecessary bg */
+  font-weight:bold;
+}
+
+#contacto label,input,select,#facturacion label,input,select,#acceso label,input,select{
+  display:table-cell;
+}
+#salto{
+  display:table-row;
+}
+
+.campo{
+  width:30%;
+  font-size: 0.8em;
+/*  margin-top:0.9em;*/
+  padding-top:1em;
+  padding-left:1em;
+}
+
+#demandante{
+  text-align: center;
+}
+#demandante label{
+  font-size: 1.4em;
+}
+
+.campo,label input, label select{
+  display: block;
+}
+
+label.error { 
+  color:red;
+  padding:0;
+  font-size: 0.7em;
+}
+
+.cif{
+  display: none;
+}
+
+#enviar{
+  margin: 10px;
+  text-align: center;
+}
+
+#contacto,#acceso{
+  position: relative;
+  left: -70px;
+}
+
+#facturacion{
+  position: relative;
+  left: 70px;
+}
