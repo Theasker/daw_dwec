@@ -1,5 +1,3 @@
-
-
 #contenedor{
   margin: 30px auto;
   border: 1px solid #ddd;
@@ -32,14 +30,11 @@ fieldset{
   border: 0.5mm solid rgb(221, 221, 221);
   background-color: whitesmoke;
   box-shadow: 2px 2px 5px #999;
-}
-fieldset:hover {
-  background-color: #ddd;
   display:table;
 }
 
 label input, label select{
-  /*	width:100%;*/  
+  width:100%;  
 }
 
 .required{
@@ -47,7 +42,7 @@ label input, label select{
   font-size:0.8;
 }
 
-input,select{
+input,select,.campo{
   width: 200px;
 }
 
@@ -60,9 +55,10 @@ legend{
   font-weight:bold;
 }
 
-#contacto label,input,select,#facturacion label,input,select,#acceso label,input,select{
+#contacto label,#facturacion label,#acceso label,input,select{
   display:table-cell;
 }
+
 #salto{
   display:table-row;
 }
@@ -70,20 +66,18 @@ legend{
 .campo{
   width:30%;
   font-size: 0.8em;
-/*  margin-top:0.9em;*/
+  margin-top:0.9em;
   padding-top:1em;
   padding-left:1em;
 }
 
-#demandante{
-  text-align: center;
-}
 #demandante label{
   font-size: 1.4em;
 }
 
-.campo,label input, label select{
-  display: block;
+#demandante input{
+  width: 10px; 
+  margin-left:1em;
 }
 
 label.error { 

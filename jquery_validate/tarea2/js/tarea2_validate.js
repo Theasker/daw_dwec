@@ -1,8 +1,8 @@
 $(document).ready(function() {
   $("#formulario").validate({
-    onkeyup: false,
-    onfocusout: false,
-    onclick: false,
+    onkeyup: true,
+    onfocusout: true,
+    onclick: true,
     rules: {
       nombre: {
         required: true,
